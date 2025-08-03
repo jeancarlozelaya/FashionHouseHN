@@ -1,8 +1,9 @@
-<!DOCTYPE ahtml>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ajuste: Se añadió user-scalable=no y maximum-scale=1.0 para deshabilitar el zoom -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
     <title>Catálogo de</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -230,14 +231,15 @@
                 margin-bottom: 30px;
             }
             
+            /* Ajuste: Los botones de catálogos ahora ocuparán casi todo el ancho para evitar desbordes */
             .button-group {
                 flex-wrap: wrap;
                 gap: 20px;
             }
 
             .catalog-link {
-                width: 45%; 
-                height: 120px;
+                width: 90%; 
+                height: auto; /* Se cambió la altura a 'auto' para que se adapte al contenido */
                 padding: 15px;
             }
 
@@ -254,22 +256,28 @@
                 margin-top: 30px;
             }
             
+            /* Ajuste: Los botones de información ahora ocuparán casi todo el ancho y se apilarán */
             .info-button-group {
                 gap: 15px;
+                flex-direction: column;
+                align-items: center;
             }
             
             .info-link {
-                width: 45%;
-                height: 90px;
+                width: 90%;
+                height: auto; /* Se cambió la altura a 'auto' para que se adapte al contenido */
+                padding: 15px;
             }
             
+            /* Ajuste: Se removió 'flex-direction: column' para que los botones de la app se mantengan horizontales */
             .app-download-buttons {
-                flex-direction: column;
+                flex-direction: row;
                 align-items: center;
             }
 
             .app-link {
-                width: 90%;
+                width: auto;
+                padding: 10px 20px;
             }
         }
 
@@ -466,7 +474,7 @@
                     '</div>' +
                     '<hr style="border: 1px solid #ccc; margin: 20px 0;">' +
                     '<div style="text-align: left; line-height: 1.5;">' +
-                    '<p>Hacemos <strong>envíos a domicilio</strong> dentro de la ciudad, zonas aledañas y a nivel nacional con <strong>cargo adicional</strong>. 🚚💨</p>' +
+                    '<p>Hacemos <strong>envíos a domicilio</strong> dentro de la ciudad, zonas aledañas y a nivel nacional con <strong>cargo adicional</strong>. �💨</p>' +
                     '</div>' +
                     '<hr style="border: 1px solid #ccc; margin: 20px 0;">' +
                     '<div style="text-align: left; line-height: 1.5;">' +
@@ -514,3 +522,4 @@
     </script>
 </body>
 </html>
+�
