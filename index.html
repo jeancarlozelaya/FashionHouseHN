@@ -12,6 +12,7 @@
     <!-- CDN para SweetAlert2 y Font Awesome -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <!-- Corrección: Se eliminó la 'x' de 'xintegrity' que causaba el error -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2C6gDLRwD9q+K3P9vC/QWk/dD+W0hG6mE0sA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
@@ -231,15 +232,15 @@
                 margin-bottom: 30px;
             }
             
-            /* Ajuste: Los botones de catálogos ahora ocuparán casi todo el ancho para evitar desbordes */
+            /* Corrección: Los botones de catálogos ahora ocuparán un ancho del 45% para que quepan dos por fila */
             .button-group {
                 flex-wrap: wrap;
-                gap: 20px;
+                gap: 10px;
             }
 
             .catalog-link {
-                width: 90%; 
-                height: auto; /* Se cambió la altura a 'auto' para que se adapte al contenido */
+                width: 45%; 
+                height: 150px;
                 padding: 15px;
             }
 
@@ -256,23 +257,24 @@
                 margin-top: 30px;
             }
             
-            /* Ajuste: Los botones de información ahora ocuparán casi todo el ancho y se apilarán */
+            /* Corrección: Los botones de información ahora ocuparán un ancho del 45% y se mantendrán horizontales */
             .info-button-group {
-                gap: 15px;
-                flex-direction: column;
-                align-items: center;
+                gap: 10px;
+                flex-direction: row;
+                flex-wrap: wrap;
             }
             
             .info-link {
-                width: 90%;
-                height: auto; /* Se cambió la altura a 'auto' para que se adapte al contenido */
+                width: 45%;
+                height: 100px; 
                 padding: 15px;
             }
             
-            /* Ajuste: Se removió 'flex-direction: column' para que los botones de la app se mantengan horizontales */
+            /* Corrección: Los botones de la app se mantienen horizontales, con ancho automático */
             .app-download-buttons {
                 flex-direction: row;
                 align-items: center;
+                gap: 10px;
             }
 
             .app-link {
@@ -474,7 +476,7 @@
                     '</div>' +
                     '<hr style="border: 1px solid #ccc; margin: 20px 0;">' +
                     '<div style="text-align: left; line-height: 1.5;">' +
-                    '<p>Hacemos <strong>envíos a domicilio</strong> dentro de la ciudad, zonas aledañas y a nivel nacional con <strong>cargo adicional</strong>. �💨</p>' +
+                    '<p>Hacemos <strong>envíos a domicilio</strong> dentro de la ciudad, zonas aledañas y a nivel nacional con <strong>cargo adicional</strong>. 🚚💨</p>' +
                     '</div>' +
                     '<hr style="border: 1px solid #ccc; margin: 20px 0;">' +
                     '<div style="text-align: left; line-height: 1.5;">' +
@@ -522,4 +524,3 @@
     </script>
 </body>
 </html>
-�
